@@ -1,3 +1,6 @@
+/*==================================
+                Padrão
+====================================*/
 * {
     margin: 0;
     padding: 0;
@@ -20,4 +23,101 @@
     display: flex;
     flex-direction: column;
 }
+
+/*==================================
+                Section
+====================================*/
+.sectionOneContainer {
+    margin: 30px;
+    width: 90%;
+}
+
+/*==================================
+                Accordion
+====================================*/
+
+   h2 {
+    text-align: left;
+}
+
+ summary:hover {
+    cursor: pointer;
+    color: var(--color-green)
+}
+
+details {
+    
+    padding: 0;
+    margin: 5px 0;
+    max-width: 100%;
+    /* overflow: hidden; */
+    border-radius: 4px;
+    border-bottom: 1px solid #ddd;
+}
+
+details summary {
+    display: flex;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    align-items: center;
+    background-color: white;
+}
+
+   details[open] summary {
+    color: black;
+    background-color: #80CD0D;
+}
+
+   details[open] summary :hover {
+    color: black;
+    cursor: pointer;
+}
+
+   details summary::-webkit-details-marker {
+    display: none;
+}
+
+   details summary::before {
+    content: "+";
+    color: black;
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+   details[open] summary::before {
+    content: "-";
+}
+
+   details[open] {
+    border: 1px solid #ddd;
+}
+
+   details summary::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+    background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" class="fa-toggle e-font-icon-svg e-fas-angle-right" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>');
+}
+
+   details[open] summary::after {
+    transform: rotate(90deg);
+    filter: invert(1);
+}
+
+   details>*:not(summary) {
+    padding: 15px;
+   }
+
+   details > ul {
+    margin: 0 20px;
+   }
+
+
+
+
 

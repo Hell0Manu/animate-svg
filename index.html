@@ -1,73 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Animete svg</title>
 </head>
+
 <body>
     <header>
         <!-- conteudo gerado 100% por humano -->
     </header>
 
     <section id="sectionOne" class="center">
-       <div class="sectionOneContainer container  row">
-        <details>
-            <summary>SVG: gráficos vetoriais escaláveis</summary>
-            <ul>
-                <li>imagem criada a partir de código XML ou HTML totalmente gerada por codigo html</li>
-                <li>Facil dimencionamento e modificação de imagem utilizando formas atraves do atributo <strong>d</strong> que contem uma serie de caminhos que definem o caminho a ser desenhado</li>
-                <li>As imagnes SVG fazem parte do DOM do navegador e por isso podem ser definidos utilizado JS ou CSS</li>
-            </ul>
-          </details>
+        <div class="sectionOneContainer container  row">
+            <details>
+                <summary>SVG: gráficos vetoriais escaláveis</summary>
+                <ul>
+                    <li>imagem criada a partir de código XML ou HTML totalmente gerada por codigo html</li>
+                    <li>Facil dimencionamento e modificação de imagem utilizando formas atraves do atributo
+                        <strong>d</strong> que contem uma serie de caminhos que definem o caminho a ser desenhado</li>
+                    <li>As imagnes SVG fazem parte do DOM do navegador e por isso podem ser definidos utilizado JS ou
+                        CSS</li>
+                </ul>
+            </details>
 
-          <details>
-            <summary>Comandos do atribudo <strong>d</strong></summary>
-            <ul>
-                <li>M - mover para</li>
-                <li>L - linha</li>
-                <li>H - linha horizontal</li>
-                <li>V - linha vertical</li>
-                <li>C - curva para</li>
-                <li>S - curva suave</li>
-                <li>Q - curva quadratica de Bézier</li>
-                <li>T - curva de Bézier quadrática suave</li>
-                <li>A - arco elíptico</li>
-                <li>Z - caminho próximo</li>
-            </ul>
-            <p>Letra minuscula definine um caminho relativo e letra maiuscula define um caminho absoluto</p>
-          </details>
+            <details>
+                <summary>Comandos do atribudo <strong>d</strong></summary>
+                <ul>
+                    <li>M - mover para</li>
+                    <li>L - linha</li>
+                    <li>H - linha horizontal</li>
+                    <li>V - linha vertical</li>
+                    <li>C - curva para</li>
+                    <li>S - curva suave</li>
+                    <li>Q - curva quadratica de Bézier</li>
+                    <li>T - curva de Bézier quadrática suave</li>
+                    <li>A - arco elíptico</li>
+                    <li>Z - caminho próximo</li>
+                </ul>
+                <p>Letra minuscula definine um caminho relativo e letra maiuscula define um caminho absoluto</p>
+            </details>
 
-          <details>
-            <summary>Dasharray e dashoffset</summary>
-            <ul>
-                <li id><strong>Dasharray:</strong> Controla o padrão de traços e espaços usados</li>
+            <details>
+                <summary>Dasharray e dashoffset</summary>
+                <ul>
+                    <li id><strong>Dasharray:</strong> Controla o padrão de traços e espaços usados</li>
+                    <h3>Exemplo</h3>
+                    <iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true"
+                        class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_1"
+                        scrolling="no"
+                        src="https://codepen.io/jcalou/embed/poKdoGQ?height=300&amp;default-tab=html%2Cresult&amp;slug-hash=poKdoGQ&amp;user=jcalou&amp;name=cp_embed_1"
+                        style="width: 100%; overflow: hidden; display: block;" title="CodePen Embed" loading="lazy"
+                        id="cp_embed_poKdoGQ" data-origwidth="100%" data-origheight="300"></iframe>
+                    <li><strong>Dashoffset:</strong> define o local onde o traço de a <span id="stroke">stroke<span>
+                                começará</li>
+                    <h3>Exemplo</h3>
+                    <iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true"
+                        class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_2"
+                        scrolling="no"
+                        src="https://codepen.io/jcalou/embed/gOKXONG?height=300&amp;default-tab=html%2Cresult&amp;slug-hash=gOKXONG&amp;user=jcalou&amp;name=cp_embed_2"
+                        style="width: 100%; overflow: hidden; display: block;" title="CodePen Embed" loading="lazy"
+                        id="cp_embed_gOKXONG" data-origwidth="100%" data-origheight="300"></iframe>
+                    <p>Esses dois atributos juntos podem ser utilizados para animar caminhos SVG usando CSS</p>
+                </ul>
+                <h3>Sintaxe</h3>
+                <p>stroke-dasharray: none | &lt;dasharray&gt; | inherit;</p>
+                <p>stroke-dashoffset: none</p>
+            </details>
+
+            <details>
+                <summary>Offset-path e offset-distance</summary>
+                <ul>
+                    <li><strong>Offset-path:</strong> especifica o caminho onde o elemento é posicionado</li>
+                    <li><strong>Offset-distance:</strong>especifica uma posição ao longo de um caminho de deslocamento
+                    </li>
+                </ul>
+                <p>comninando as duas propriedades é possivel criar animações como a do exemplo</p>
                 <h3>Exemplo</h3>
-                <iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_1" scrolling="no" src="https://codepen.io/jcalou/embed/poKdoGQ?height=300&amp;default-tab=html%2Cresult&amp;slug-hash=poKdoGQ&amp;user=jcalou&amp;name=cp_embed_1" style="width: 600px; overflow: hidden; display: block;" title="CodePen Embed" loading="lazy" id="cp_embed_poKdoGQ" data-origwidth="100%" data-origheight="300"></iframe>
-                <li><strong>Dashoffset:</strong>  define o local onde o traço de a <span id="stroke">stroke<span> começará</li>
-                <h3>Exemplo</h3>
-                <iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_2" scrolling="no" src="https://codepen.io/jcalou/embed/gOKXONG?height=300&amp;default-tab=html%2Cresult&amp;slug-hash=gOKXONG&amp;user=jcalou&amp;name=cp_embed_2" style="width: 600px; overflow: hidden; display: block;" title="CodePen Embed" loading="lazy" id="cp_embed_gOKXONG" data-origwidth="100%" data-origheight="300"></iframe>
-                <p>Esses dois atributos juntos podem ser utilizados para animar caminhos SVG usando CSS</p>
-            </ul>
-            <h3>Sintaxe</h3>
-            <p>stroke-dasharray: none | &lt;dasharray&gt; | inherit;</p>
-            <p>stroke-dashoffset: none</p>
-          </details>
-          
-          <details>
-            <summary>Offset-path e offset-distance</summary>
-            <ul>
-                <li><strong>Offset-path:</strong> especifica o caminho onde o elemento é posicionado</li>
-                <li><strong>Offset-distance:</strong>especifica uma posição ao longo de um caminho de deslocamento</li>
-            </ul>
-            <p>comninando as duas propriedades é possivel criar animações como a do exemplo</p>
-            <h3>Exemplo</h3>
-            <iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_3" scrolling="no" src="https://codepen.io/jcalou/embed/jOKaEEQ?height=300&amp;default-tab=html%2Cresult&amp;slug-hash=jOKaEEQ&amp;user=jcalou&amp;name=cp_embed_3" style="width: 700px; overflow: hidden; display: block;" title="Incorporar CodePen" loading="lazy" id="cp_embed_jOKaEEQ" data-origwidth="100%" data-origheight="300"></iframe>
-          </details>
+                <iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true"
+                    class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_3" scrolling="no"
+                    src="https://codepen.io/jcalou/embed/jOKaEEQ?height=300&amp;default-tab=html%2Cresult&amp;slug-hash=jOKaEEQ&amp;user=jcalou&amp;name=cp_embed_3"
+                    style="width: 100%; overflow: hidden; display: block;" title="Incorporar CodePen" loading="lazy"
+                    id="cp_embed_jOKaEEQ" data-origwidth="100%" data-origheight="300"></iframe>
+            </details>
 
-        
-       </div>
+
+        </div>
     </section>
 </body>
+
 </html>
