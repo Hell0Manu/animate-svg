@@ -20,22 +20,25 @@
                 <ul>
                     <li>imagem criada a partir de código XML ou HTML totalmente gerada por codigo html</li>
                     <li>Facil dimencionamento e modificação de imagem utilizando formas atraves do atributo
-                        <strong>d</strong> que contem uma serie de caminhos que definem o caminho a ser desenhado</li>
+                        <strong>d</strong> que contem uma serie de caminhos que definem o que deve ser desenhado
+                    </li>
+                    <li>Suportado na maioria dos navegadores sem ncessecidade de script ou biblioteca adicional</li>
+                    <li>Rpaido carregamento e menos consumo de banda</li>
                     <li>As imagnes SVG fazem parte do DOM do navegador e por isso podem ser definidos utilizado JS ou
                         CSS</li>
                 </ul>
             </details>
 
             <details>
-                <summary>Comandos do atribudo <strong>d</strong></summary>
+                <summary>Comandos do atribudo d</summary>
                 <ul>
-                    <li>M - mover para</li>
+                    <li>M - mover para (M x y)</li>
                     <li>L - linha</li>
                     <li>H - linha horizontal</li>
                     <li>V - linha vertical</li>
                     <li>C - curva para</li>
                     <li>S - curva suave</li>
-                    <li>Q - curva quadratica de Bézier</li>
+                    <li>Q - curva quadratica de Bézier (Q controlX controlY endX endY)</li>
                     <li>T - curva de Bézier quadrática suave</li>
                     <li>A - arco elíptico</li>
                     <li>Z - caminho próximo</li>
@@ -86,6 +89,29 @@
                     id="cp_embed_jOKaEEQ" data-origwidth="100%" data-origheight="300"></iframe>
             </details>
 
+            <div style="padding-top: 50px;">
+                <h2 class="center">SVG Attribute reference</h2>
+                <details>
+                    <summary>Replace, accumule e add</summary>
+                    <ul>
+                        <li><strong>Replace:</strong> O valor do efeito subjacente é substituido (valor padrão)</li>
+                        <li><strong>Add:</strong> O valor do efeito subjacente é adicionado</li>
+                        <li><strong>Accumulate: </strong>Os valores subjacentes são combinados</li>
+                    </ul>
+                    <h3>Exemplo</h3>
+                    <ul>
+                        <li>Com <code>replace</code>, <code>blur(10px)</code> substituirá <code>blur(5px)</code> no <code>0%</code> quadro-chave. Este é o comportamento padrão da propriedade.</li>
+                        <li>Com <code>add</code>, o valor do efeito composto no <code>0%</code> quadro-chave será <code>blur(5px) blur(10px)</code></li>
+                        <li>Com <code>accumulate</code>, o valor do efeito composto no <code>0%</code> será <code>blur(15px)</code>.</li>
+                    </ul>
+                    <iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_1" scrolling="no" src="https://codepen.io/tylergaw/embed/YzBJmGv?height=300&amp;default-tab=html%2Cresult&amp;slug-hash=YzBJmGv&amp;user=tylergaw&amp;name=cp_embed_1" style="width: 100%; overflow:hidden; display:block;" title="Incorporação do CodePen" loading="lazy" id="cp_embed_YzBJmGv"></iframe>
+                    <p>Add e Accumulate não são iguais apensar de parecerem eles se comportam de maneira diferente a depender das propriedades animadas</p>
+                    <iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_3" scrolling="no" src="https://codepen.io/tylergaw/embed/mdvQbpV?height=300&amp;default-tab=html%2Cresult&amp;slug-hash=mdvQbpV&amp;user=tylergaw&amp;name=cp_embed_3" style="width: 100%; overflow:hidden; display:block;" title="Incorporação do CodePen" loading="lazy" id="cp_embed_mdvQbpV"></iframe>                  
+                    <a href="https://12daysofweb.dev/2023/animation-composition/">Referencia</a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-composition">Referencia</a>
+                </details>
+                </div>
+            
 
         </div>
     </section>

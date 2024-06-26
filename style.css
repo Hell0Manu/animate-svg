@@ -32,21 +32,28 @@
     width: 90%;
 }
 
+h3 {
+    padding: 20px 0 6px 0;
+}
+
+ul > li {
+    padding: 10px;
+}
+
+code {
+    border-radius: 5px;
+    background: #f2f1f1;
+    padding: .125rem .25rem;
+}
 /*==================================
                 Accordion
 ====================================*/
-
-   h2 {
-    text-align: left;
-}
-
  summary:hover {
     cursor: pointer;
     color: var(--color-green)
 }
 
 details {
-    
     padding: 0;
     margin: 5px 0;
     max-width: 100%;
@@ -110,12 +117,12 @@ details summary {
 }
 
    details>*:not(summary) {
-    padding: 15px;
-   }
+    padding: 0 15px 0 15px;
+}
 
    details > ul {
     margin: 0 20px;
-   }
+}
 
 
 
